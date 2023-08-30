@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #f5abc9;
+  font-family: sans-serif;
+  color: grey;
+}
+main {
+  margin-top: 5rem;
+  width: 80%;
+  max-width: 1200px;
+  display: flex;
+  gap: 2rem;
+}
+.img-container {
+  width: 50%;
+  height: 500px;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.hdnicewallpapers.com%2FWalls%2FBig%2FNature%2520and%2520Landscape%2FBeautiful_Sunrising_Nature_Image.jpg&f=1&nofb=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+}
+.text-container {
+  background-color: #ffe5e2;
+  width: 50%;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+.btn-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+button {
+  padding: 1rem;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  background-color: #b6c9fc;
+}
+.text {
+  background-color: #ffe5e2;
+  padding: 1rem 2rem;
+  position: absolute;
+  height: fit-content;
+}
+p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+.hidden {
+  visibility: hidden;
+}
+.selected {
+  background-color: #ffe5e2;
+}
+
+@media (width <= 1185px) {
+  main {
+    flex-direction: column;
+  }
+  .img-container {
+    width: 100%;
+  }
+  .text-container {
+    /* border: solid red 1px; */
+    width: 100%;
+    height: fit-content;
+    overflow: unset;
+  }
+}
